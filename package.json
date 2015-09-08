@@ -1,0 +1,48 @@
+{
+  "name": "kerplunk-topic-ner",
+  "displayName": "Named Entity Recognition",
+  "description": "Adds topics to activity items using Named Entity Recognition (using Stanford NER)",
+  "version": "0.0.1",
+  "kerplunk": {
+    "permissions": {
+      "kerplunk-topic": {
+        "models": [
+          "Topic"
+        ]
+      }
+    },
+    "dependencies": [
+      "kerplunk-topic"
+    ],
+    "services": {
+      "ner": {
+        "image": "brianshaler/node-ner:0.0.1",
+        "ports": [
+          "8008/tcp"
+        ]
+      }
+    }
+  },
+  "keywords": [
+    "kerplunk-plugin",
+    "kp:Utility"
+  ],
+  "engines": {
+    "node": ">=0.10"
+  },
+  "main": "./lib/index.js",
+  "dependencies": {
+    "lodash": "^3.7.0",
+    "request": "^2.60.0",
+    "when": "^3.7.3"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.1",
+    "glut": "0.0.1",
+    "gulp": "^3.8.8",
+    "gulp-coffee": "^2.3.1"
+  },
+  "scripts": {
+    "prepublish": "rm -rf ./lib ./public && gulp"
+  }
+}
