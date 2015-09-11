@@ -2,7 +2,7 @@
   "name": "kerplunk-topic-ner",
   "displayName": "Named Entity Recognition",
   "description": "Adds topics to activity items using Named Entity Recognition (using Stanford NER)",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "kerplunk": {
     "permissions": {
       "kerplunk-topic": {
